@@ -1,0 +1,358 @@
+:root {
+  --text-color: #667085;
+  --main-color: #8E2424;
+  --title: #101828;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem 2rem;
+  align-items: center;
+}
+.links a {
+  color: var(--text-color);
+  text-decoration: none;
+  margin-right: 2rem;
+}
+
+button {
+  padding: 0.8rem 1rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  border-radius: 0.5rem;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+button.signUp {
+  background-color: var(--main-color);
+  color: #FFF;
+}
+
+.sideMenu {
+  display: none;
+  visibility: hidden;
+}
+
+.menu.active {
+  right: 0;
+  box-shadow: -10px 0 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+}
+
+.menu .links a {
+  margin-bottom: 2rem;
+}
+
+.sideMenu img {
+  position: relative;
+  z-index: 1;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+}
+
+/* Cabeçalho - Primeira seção */
+
+.about-us {
+  display: flex;
+  padding: 7rem 1rem;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem; /* poderia ser margin-bottom pra cada elemento, gap dá um espaçamento entre todos
+  os filhos de uma div com display flex*/
+}
+
+.about-us span {
+  color: var(--main-color);
+}
+
+.about-us h1 {
+  font-size: 2rem;
+  color: var(--titl);
+  text-align: center;
+}
+
+.about-us p {
+  color: var(--text-color);
+  max-width: 50%;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+/* Seção de métricas */
+
+.metrics {
+  display: grid;
+  padding: 0 8rem;
+  column-gap: 3rem;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.metric {
+  gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.metric h1 {
+  color: var(--main-color);
+  font-size: 3rem;
+  font-weight: bold
+}
+
+.metric span {
+  color: var(--text-color);
+  line-height: 140%;
+  font-size: 90%;
+}
+
+.metric .metric-title {
+  font-weight: 500;
+  color: #101828;
+}
+
+/* Seção de talentos */
+
+.talents {
+  gap: 1rem;
+  display: flex;
+  padding: 0 1rem;
+  padding-top: 9rem;
+  align-items: center;
+  flex-direction: column;
+}
+
+.talents h2 {
+  text-align: center;
+  color: var(--title);
+}
+
+.talents span {
+  background: rgba(142, 36, 36, 0.05);
+  color: var(--main-color);
+  padding: 0.5rem 1rem;
+  border-radius: 1rem;
+}
+
+.talents p {
+  color: var(--text-color);
+  text-align: center;
+}
+
+.talents img {
+  margin-top: 2rem;
+  width: 80%;
+}
+
+/* Seção de vagas abertas */
+
+.vagas-abertas {
+  padding-top: 4rem;
+}
+
+.vagas-abertas span.area-principal {
+  display: block;
+  max-width: 50%;
+  margin: 0 auto;
+  margin-top: 2rem;
+  font-weight: bold;
+  color: var(--title);
+  margin-bottom: 2rem;
+}
+
+.vaga {
+  border: 1px solid #EAECF0;
+  border-radius: 0.5rem;
+  color: var(--title);
+  margin-bottom: 1rem;
+  max-width: 50%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.vaga span.titulo-vaga {
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.vaga .informacoes {
+  gap: 2rem;
+  display: flex;
+  font-size: 90%;
+  margin-top: 1rem;
+  color: var(--text-color);
+}
+
+/* Seção de depoimentos */
+
+.depoimento {
+  display: flex;
+  max-width: 80%;
+  margin: 8rem auto;
+  padding: 3rem 2rem;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(195, 25, 25, 0.05);
+}
+
+.depoimento span {
+  font-weight: 500;
+  text-align: center;
+  color: var(--main-color);
+}
+
+.depoimento img {
+  width: 48px;
+}
+
+.depoimento h2 {
+  color: var(--title);
+  text-align: center;
+  font-weight: 500;
+  max-width: 70%;
+  margin: 2rem 0;
+}
+
+.depoimento span.nome {
+  color: var(--title);
+  margin: 0.5rem 0;
+  font-weight: 400;
+}
+
+.depoimento span.cargo {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+/* Seção final - formulário de email */
+
+footer {
+  gap: 1.5rem;
+  display: flex;
+  padding: 6rem 1rem;
+  text-align: center;
+  align-items: center;
+  background: #F9FAFB;
+  flex-direction: column;
+  justify-content: center;
+}
+
+footer h2 {
+  color: var(--title);
+}
+
+footer span {
+  color: var(--text-color);
+}
+
+footer form {
+  display: flex;
+  justify-content: space-between;
+}
+
+footer input {
+  width: 12rem;
+  outline: none;
+  padding-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #D0D5DD;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 920px) {
+  .metrics {
+    padding: 0 4rem;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .metrics {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .metric {
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+  }
+
+  .metric span {
+    max-width: 280px;
+    text-align: center;
+  }
+
+  .about-us p {
+    max-width: 70%;
+  }
+
+  .vaga {
+    max-width: 70%;
+  }
+  
+  .vagas-abertas span.area-principal {
+    max-width: 70%;
+  }
+
+  .depoimento h2 {
+    max-width: 100%;
+    font-size: 120%;
+  }
+
+  /* Ajustes de menu */
+
+  .sideMenu {
+    display: initial;
+    visibility: visible;
+  }
+
+  .links {
+    margin: 2rem 0;
+  }
+
+  .links a {
+    margin-right: 0;
+  }
+
+  .menu {
+    top: 0;
+    width: 15rem;
+    height: 100vh;
+    padding: 2rem;
+    right: -1000px;
+    position: fixed;
+    transition: all 2s;
+    background: #F9FAFB;
+    flex-direction: column;
+  }
+
+  .menu .links, .menu .buttons {
+    flex-direction: column;
+    display: flex;
+    width: 100%;
+  }
+}
