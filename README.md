@@ -1,7 +1,5 @@
-# vitrinedev
 # 7 Days of Code - HTML e CSS
-
-<img src="https://ayltoninacio.com.br/img/p/32w750.jpg" width="300" height="170"/>
+<img src="https://ayltoninacio.com.br/img/p/32w750.jpg" width="300" height="170"/># vitrinedev
 
 Esse projeto foi realizado para um desafio de 7 dias de código, criado por uma das professoras da Alura Giovanna Moeller, em parceria com a Alura, uma empresa de educação em tecnologia.
 
